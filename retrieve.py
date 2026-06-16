@@ -82,25 +82,25 @@ def get_connection_pool() -> psycopg2.pool.SimpleConnectionPool:
 # ──────────────────────────────────────────────────────────────────────────────
 
 LOCAL_FALLBACK_DICTIONARY = {
-    "Pakistan": {
-        "jurisdiction": "Pakistan",
-        "sub_jurisdiction": "National Law",
-        "source_url": "fallback:pakistan-copyright-1962",
-        "chunk_text": "Pakistan Copyright Ordinance 1962 (Section 3 on definitions, authorship requirements): Requires human authorship for copyright protection. Machine-generated content without sufficient human creative input is ineligible for copyright protection.",
+    "European Union": {
+        "jurisdiction": "European Union",
+        "sub_jurisdiction": "EU Directives",
+        "source_url": "https://eur-lex.europa.eu/eli/dir/2019/790/oj",
+        "chunk_text": "EU Directive on Copyright in the Digital Single Market (DSM) - Articles 3 and 4:\n- Article 3 establishes a mandatory exception allowing text and data mining (TDM) for scientific research purposes by research organizations and cultural heritage institutions, strictly for non-commercial objectives.\n- Article 4 provides a general exception for text and data mining for commercial purposes across public internet datasets. However, this exception ONLY applies if the use of works has not been expressly reserved by their rightsholders in an appropriate manner, such as machine-readable means (e.g., robots.txt, metadata tags, or terms of service). If a rightsholder opts out, explicit commercial licensing is mandatory.",
         "distance": 0.0
     },
     "United States": {
         "jurisdiction": "United States",
         "sub_jurisdiction": "US federal law",
-        "source_url": "fallback:us-copyright-act-sec-107",
-        "chunk_text": "US Copyright Act Section 107 (The 4 factors of Fair Use regarding machine training): The fair use of a copyrighted work is not an infringement. The four factors are: 1) purpose and character of the use, 2) nature of the copyrighted work, 3) amount and substantiality of the portion used, and 4) effect upon the potential market.",
+        "source_url": "https://www.copyright.gov/title17/92chap1.html#107",
+        "chunk_text": "US Copyright Act, 17 U.S.C. Section 107 - Fair Use Doctrine:\n- Allows the unauthorized use of copyrighted works based on a four-factor balancing test: (1) purpose/character of use, including commerciality vs transformative nature; (2) nature of work; (3) amount used; (4) market effect.\n- High-court US judicial precedents (e.g., Authors Guild v. Google) establish that mass data copying and scraping for intermediate text indexing and data mining constitutes a highly 'transformative use', meaning commercial text and data mining frequently qualifies as Fair Use without requiring explicit licensing.",
         "distance": 0.0
     },
-    "European Union": {
-        "jurisdiction": "European Union",
-        "sub_jurisdiction": "EU Directives",
-        "source_url": "fallback:eu-dsm-directive-art-3-4",
-        "chunk_text": "EU DSM Directive Articles 3-4 (Text and Data Mining exemptions for automated scrapers): Provides exceptions for text and data mining (TDM) for scientific research (Art 3), and a general TDM exception allowing commercial scraping unless rightsholders have explicitly reserved their rights (Art 4).",
+    "Pakistan": {
+        "jurisdiction": "Pakistan",
+        "sub_jurisdiction": "National Law",
+        "source_url": "https://www.wipo.int/wipolex/en/legislation/details/3414",
+        "chunk_text": "Pakistan Copyright Ordinance 1962 (Section 3 and Section 57 - Fair Dealing):\n- Section 3 requires original human authorship for copyright to subsist. Autonomously generated machine output lacks human creative input and is public domain.\n- Section 57 outlines 'Fair Dealing' exceptions, which protect unauthorized reproductions exclusively for research, private study, criticism, or review. Pakistan's current framework features no broad commercial text and data mining exemptions, leaving commercial automated scraping in a legally gray, high-risk status.",
         "distance": 0.0
     },
     "United Kingdom": {
