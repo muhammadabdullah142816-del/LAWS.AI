@@ -2,7 +2,9 @@ import os
 import sys
 sys.stdout.reconfigure(line_buffering=True, encoding='utf-8')
 
-# os.environ["HF_HUB_OFFLINE"] = "1"  # REMOVED: Cloud deployment needs to download model on first boot
+# Explicitly FORCE online mode to override any sticky cloud environment variables
+os.environ["HF_HUB_OFFLINE"] = "0"
+os.environ["TRANSFORMERS_OFFLINE"] = "0"
 
 import psycopg2
 import psycopg2.pool

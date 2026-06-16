@@ -3,7 +3,9 @@ import sys
 import functools
 sys.stdout.reconfigure(line_buffering=True, encoding='utf-8')
 
-# Removed HF_HUB_OFFLINE="1" to allow Streamlit Cloud to download the model
+# Explicitly FORCE online mode to override any sticky cloud environment variables
+os.environ["HF_HUB_OFFLINE"] = "0"
+os.environ["TRANSFORMERS_OFFLINE"] = "0"
 os.environ["TRANSFORMERS_VERBOSITY"] = "error"   # suppress torchvision noise
 os.environ["TOKENIZERS_PARALLELISM"] = "false"   # prevent fork warnings
 
