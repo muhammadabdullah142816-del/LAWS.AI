@@ -313,7 +313,7 @@ with st.sidebar:
         )
 
     with st.expander("🛠️ System Diagnostics"):
-        db_lbl  = "Connected" if _ok is True else f"Error"
+        db_lbl  = "Connected" if _ok is True else f"Error: {_ok}"
         db_cls  = "dg" if _ok is True else "dred"
         m_lbl   = "Cached"    if _ok is True else "Loading…"
         rows = [
