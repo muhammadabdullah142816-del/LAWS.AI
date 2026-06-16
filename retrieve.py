@@ -2,8 +2,7 @@ import os
 import sys
 sys.stdout.reconfigure(line_buffering=True, encoding='utf-8')
 
-# Block HuggingFace Hub network calls — use only locally-cached model weights
-os.environ["HF_HUB_OFFLINE"] = "1"
+# os.environ["HF_HUB_OFFLINE"] = "1"  # REMOVED: Cloud deployment needs to download model on first boot
 
 import psycopg2
 import psycopg2.pool
@@ -33,8 +32,7 @@ def get_cached_model() -> SentenceTransformer:
     """Load the 384-dimension MiniLM embedding model from local disk cache."""
     print("[RETRIEVE] Loading featherweight local embedding model (all-MiniLM-L6-v2)...")
     return SentenceTransformer(
-        "sentence-transformers/all-MiniLM-L6-v2",
-        local_files_only=True,
+        "sentence-transformers/all-MiniLM-L6-v2"
     )
 
 

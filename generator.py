@@ -3,8 +3,7 @@ import sys
 import functools
 sys.stdout.reconfigure(line_buffering=True, encoding='utf-8')
 
-# Block HuggingFace Hub network calls — rely exclusively on cached weights
-os.environ["HF_HUB_OFFLINE"]        = "1"
+# Removed HF_HUB_OFFLINE="1" to allow Streamlit Cloud to download the model
 os.environ["TRANSFORMERS_VERBOSITY"] = "error"   # suppress torchvision noise
 os.environ["TOKENIZERS_PARALLELISM"] = "false"   # prevent fork warnings
 
