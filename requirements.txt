@@ -1,0 +1,19 @@
+# ── Web Application Core ───────────────────────────────────────────────────────
+streamlit>=1.35.0
+sentence-transformers>=3.0.0
+psycopg2-binary>=2.9.9
+pgvector>=0.3.0
+groq>=0.9.0
+python-dotenv>=1.0.1
+beautifulsoup4>=4.12.3
+
+# ── Data Ingestion Pipeline ────────────────────────────────────────────────────
+scrapy>=2.11.1
+Twisted>=22.10.0
+scrapy-playwright>=0.0.33
+playwright>=1.40.0
+
+# ── Vector / AI Infrastructure ─────────────────────────────────────────────────
+pinecone-client>=3.0.0
+openai>=1.59.3
+supabase>=2.3.0

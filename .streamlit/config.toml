@@ -1,0 +1,24 @@
+[theme]
+base                  = "dark"
+backgroundColor       = "#080c14"
+secondaryBackgroundColor = "#0d1117"
+textColor             = "#e6edf3"
+font                  = "sans serif"
+
+[server]
+headless              = true
+port                  = 8501
+fileWatcherType       = "none"     # disables transformers path-scan noise
+enableXsrfProtection  = true
+maxUploadSize         = 10
+
+[browser]
+gatherUsageStats      = false
+serverAddress         = "localhost"
+
+[runner]
+magicEnabled          = false      # skip auto-magic scan → faster startup
+fastReruns            = true       # partial rerun on widget change
+
+[logger]
+level                 = "warning"  # suppress INFO noise

@@ -1,0 +1,58 @@
+# ── Secrets (NEVER commit) ────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# ── HuggingFace / model cache ─────────────────────────────────────────────────
+.cache/
+*.bin
+*.safetensors
+*.ot
+models/
+weights/
+
+# ── Scrapy / crawl artifacts ──────────────────────────────────────────────────
+*.log
+scrapy.log
+crawl_logs/
+legal_monitor/.scrapy/
+legal_monitor/legal_monitor/spiders/__pycache__/
+
+# ── OS artifacts ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE artifacts ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+.dockerignore
+
+# ── Agents / internal tooling ─────────────────────────────────────────────────
+.agents/
+skills-lock.json
